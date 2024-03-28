@@ -15,6 +15,7 @@ jobs:
         with:
           node-version: 18
           cache: "yarn"
+          registry-url: "https://registry.npmjs.org"
       - name: Validate Tag
         if: ${{ (github.ref_type != 'tag' || inputs.IS_CONFIRMED == 'false') }}
         run: |
@@ -27,3 +28,5 @@ jobs:
         run: yarn build
       - name: Deploy
         run: yarn deploy
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
