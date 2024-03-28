@@ -12,7 +12,7 @@
  * const timer = new WWTimer((timeInfo) => {
  *   console.log(`Current Time: ${timeInfo.currentTime}, Elapsed: ${timeInfo.timeElapsed}`);
  * }, 1000);
- * timer.play(); // Starts the timer
+ * timer.start(); // Starts the timer
  * timer.pause(); // Pauses the timer
  * timer.destroy(); // Stops and cleans up the timer
  *
@@ -67,13 +67,13 @@ class WWTimer {
    * Starts the timer.
    * The timer begins calling the provided callback function at the specified intervals.
    */
-  play() {
+  start() {
     this.isActive = true;
   }
 
   /**
    * Pauses the timer.
-   * The callback function will not be called until the timer is restarted with `play`.
+   * The callback function will not be called until the timer is restarted with `start`.
    */
   pause() {
     this.isActive = false;
