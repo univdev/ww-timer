@@ -1,6 +1,7 @@
 {
   "name": "ww-timer",
   "version": "0.0.1",
+  "keywords": ["web worker", "timer", "browser", "javascript", "background processing", "multithreading", "performance", "asynchronous", "scheduling"],
   "description": "The More accurate timer using Web Worker",
   "main": "dist/ww-timer.js",
   "types": "index.d.ts",
