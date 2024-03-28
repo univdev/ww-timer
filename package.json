@@ -6,7 +6,8 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup src/index.js --file dist/ww-timer.js --format umd --name \"wwTimer\""
+    "build": "rollup src/index.js --file dist/ww-timer.js --format umd --name \"wwTimer\"",
+    "lint": "eslint . --ext .js,.ts"
   },
   "repository": {
     "type": "git",
