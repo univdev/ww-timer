@@ -36,13 +36,17 @@ timer.start(() => {
   console.log('Timer tick');
 });
 
-// Stop the timer
-timer.stop();
+// Pause the timer
+timer.pause();
+
+// Destroy the timer instance
+timer.destroy();
 ```
 
 ## API Reference
 - `start(callback, interval)`: Starts the timer with the specified callback function and interval.
-- `stop()`: Stops the timer.
+- `pause()`: Stops the timer.
+- `destroy()`: Destroy the timer instance.
 
 ## Compatibility
 Compatible with most modern web browsers that support the Web Workers API.
