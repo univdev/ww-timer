@@ -19,8 +19,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "lint": "eslint . --ext .js,.ts",
-    "prepare": "husky",
-    "deploy": "yarn lint && yarn build && npm publish --access public"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
