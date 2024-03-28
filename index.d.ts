@@ -22,7 +22,7 @@ declare class WWTimer {
   /**
    * Starts the timer.
    */
-  play(): void;
+  start(): void;
 
   /**
    * Pauses the timer.

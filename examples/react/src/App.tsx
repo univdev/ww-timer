@@ -21,7 +21,7 @@ function App() {
   }, [increaseCount]);
 
   useEffect(() => {
-    if (wwTimer) wwTimer.play();
+    if (wwTimer) wwTimer.start();
   }, [wwTimer]);
 
   return (
