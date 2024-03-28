@@ -1,6 +1,6 @@
 /**
- * 
- * @param {string} workerScript 
+ *
+ * @param {string} workerScript
  */
 export const getWorkerURI = (workerScript) => {
   if (typeof workerScript !== 'string') {
@@ -13,4 +13,4 @@ export const getWorkerURI = (workerScript) => {
   window.setTimeout(() => URL.revokeObjectURL(url));
 
   return url;
-}
+};
