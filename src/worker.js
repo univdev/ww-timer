@@ -1,0 +1,1 @@
+export const worker = 'self.addEventListener("message",a=>{if("object"!=typeof a.data)throw Error("Invalid data");if("number"!=typeof a.data.interval)throw Error("Invalid interval");self.setInterval(()=>{self.postMessage("called")},a.data.interval)});';

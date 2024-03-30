@@ -1,0 +1,32 @@
+name: Deploy package on NPM
+on:
+  workflow_dispatch:
+    inputs:
+      isConfirmed:
+        description: "Which version do you want to deploy? (ex. 1.0.0)"
+        required: true
+        type: boolean
+jobs:
+  deploy-package-on-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: "yarn"
+          registry-url: "https://registry.npmjs.org"
+      - name: Validate Tag
+        if: ${{ (github.ref_type != 'tag' || inputs.IS_CONFIRMED == 'false') }}
+        run: |
+          exit 1
+      - name: Install dependencies
+        run: yarn
+      - name: Lint
+        run: yarn lint
+      - name: Build
+        run: yarn build
+      - name: Deploy
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

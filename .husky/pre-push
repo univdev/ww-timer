@@ -1,0 +1,14 @@
+#!/bin/sh
+
+PROHIBITED_REF="refs/heads/master"
+
+if read local_ref local_sha remote_ref remote_sha
+then
+    if [ "$remote_ref" = "$PROHIBITED_REF" ]
+    then
+        echo "prevent to push master"
+        exit 1
+    fi
+fi
+
+exit 0
