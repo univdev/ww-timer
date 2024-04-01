@@ -29,12 +29,12 @@ yarn add ww-timer
 import WWTimer from 'ww-timer';
 
 // Create a new timer
-const timer = new WWTimer();
+const timer = new WWTimer(() => {
+  console.log('Timer tick');
+}, 2000);
 
 // Start the timer with a callback function
-timer.start(() => {
-  console.log('Timer tick');
-});
+timer.start();
 
 // Pause the timer
 timer.pause();
@@ -44,9 +44,11 @@ timer.destroy();
 ```
 
 ## API Reference
-- `start(callback, interval)`: Starts the timer with the specified callback function and interval.
-- `pause()`: Stops the timer.
-- `destroy()`: Destroy the timer instance.
+- `new WWTimer(callback, interval)`: Creates a new `WWTimer` instance with a callback function to be executed at a specified interval.
+- `start()`: Starts the timer. The timer will call the callback function at the interval specified during the instance creation.
+- `pause()`: Pauses the timer. The timer can be resumed by calling `start()` again.
+- `destroy()`: Destroys the timer instance and frees up resources. After calling this method, the timer instance cannot be used or restarted.
+
 
 ## Compatibility
 Compatible with most modern web browsers that support the Web Workers API.
