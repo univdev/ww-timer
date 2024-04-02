@@ -1,4 +1,4 @@
-![WW Timer](./banner.jpg)
+![WW Timer](https://github.com/univdev/ww-timer/raw/master/banner.jpg)
 # WW Timer
 WW Timer is a highly accurate timer library for web browsers.
 

@@ -1,5 +1,11 @@
 .gitignore
 .git/
+.github/
+.eslintrc.js
+husky/
+src/
 node_modules/
 npm-debug.log
 examples/
+rollup.config.mjs
+banner.jpg
