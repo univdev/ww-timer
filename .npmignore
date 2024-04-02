@@ -2,7 +2,7 @@
 .git/
 .github/
 .eslintrc.js
-husky/
+.husky/
 src/
 node_modules/
 npm-debug.log
